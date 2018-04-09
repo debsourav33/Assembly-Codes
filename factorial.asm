@@ -27,25 +27,17 @@ main:
 	
 fact:
 	n equ 8
-	;push RBP
-	;mov RBP, RSP
-	;sub RSP, 16
 	cmp RDI, 1
 	jg greater
 	mov RAX, 1
-	;leave
-	;pop RBP
 	ret
 	
 greater:
-	;mov [RSP+n], RDI
 	push RDI
 	dec RDI
 	call fact
-	;mov RDI, [RSP+n]
 	pop RDI
 	imul RAX, RDI
-	;leave
 	ret		
 		
 	

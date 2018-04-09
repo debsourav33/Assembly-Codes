@@ -52,6 +52,7 @@ cont:
 	cmp RDI, 5
 	jge break
 	jmp inner
+	
 break:  inc RSI
 	cmp RSI, 4
 	jge exit
